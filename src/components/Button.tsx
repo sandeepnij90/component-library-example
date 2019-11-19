@@ -1,16 +1,20 @@
 import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
-import { styles } from 'components/styles'
+import { styles } from './styles'
 
 interface IButtonProps {
     buttonStyle: string
     icon: any
+    disabled: boolean
 }
 
 const ButtonWrapper = styled.button<IButtonProps>`
-    padding: 10 12px;
+    padding: 10px 12px;
     cursor: pointer;
     border-radius: 4px;
+    ${props => props.disabled && `
+        opacity: 0.5;
+    `}
     ${props => props.buttonStyle === 'primary' && `
         background-color: ${styles.colors.primaryColor}
         color: ${styles.colors.white}
