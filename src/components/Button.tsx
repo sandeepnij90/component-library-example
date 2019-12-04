@@ -16,7 +16,7 @@ const ButtonWrapper = styled.button<IButtonProps>`
         opacity: 0.5;
     `}
     ${props => props.buttonStyle === 'primary' && `
-        background-color: ${styles.colors.primaryColor}
+        background-color: ${styles.colors.primary}
         color: ${styles.colors.white}
         &:hover {
            
@@ -25,8 +25,8 @@ const ButtonWrapper = styled.button<IButtonProps>`
 
     ${props => props.buttonStyle === 'secondary' && `
         background-color: ${styles.colors.white};
-        color: ${styles.colors.primaryColor};
-        border: 1px solid ${styles.colors.primaryColor};
+        color: ${styles.colors.primary};
+        border: 1px solid ${styles.colors.primary};
     `}
 `
 

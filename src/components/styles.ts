@@ -1,10 +1,12 @@
 export const styles = {
     fontFamily: 'Helvetica Neue",Arial,sans-serif',
     colors: {
-        primaryColor: '#2096f3',
-        white: 'white',
+        primary: '#3483C5',
+        secondary: '#F6881F',
+        white: '#FFFFFF',
         black: 'black',
-        error: 'red',
-        success: 'green',
+        grey: '#EBEBEB',
+        error: '#FF6E6E',
+        success: '#87C440'
     }
 }
