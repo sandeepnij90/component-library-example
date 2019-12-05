@@ -61,7 +61,7 @@ const Error = styled.span`
 
 const LabelContainer = styled.div`
     display: grid;
-    grid-template-columns: max-content max-content;
+    grid-template-columns: max-content 1fr;
     align-items: flex-end;
 `
 
