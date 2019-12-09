@@ -1,11 +1,15 @@
 import React, { FunctionComponent, useState } from 'react'
 import styled from 'styled-components'
 
+interface IProps {
+    message?: string
+}
+
 const TooltipWrapper = styled.div`
     position: relative;
 `
 
-const HelpIcon = styled.div`
+const HelpIcon = styled.div<IProps>`
     background: #788A9A;
     width:20px;
     height: 20px;
@@ -31,6 +35,9 @@ const HelpIcon = styled.div`
             padding: 10px;
             font-size: 12px;
             left: 0;
+            ${props => props.message &&`
+                content: "${props.message}";
+            `}
         }
         &:before {
             width: 0; 
@@ -46,9 +53,6 @@ const HelpIcon = styled.div`
     }
 `
 
-interface IProps {
-    message?: string
-}
 
 
 const Tooltip: FunctionComponent<IProps> = ({ message="" }) => {
@@ -64,7 +68,7 @@ const Tooltip: FunctionComponent<IProps> = ({ message="" }) => {
 
     return (
         <TooltipWrapper>
-            <HelpIcon onMouseOver={handleHover} onMouseLeave={handleLeaveHover} ><i>i</i></HelpIcon>
+            <HelpIcon onMouseOver={handleHover} onMouseLeave={handleLeaveHover} message={message}><i>i</i></HelpIcon>
         </TooltipWrapper>
     )
 } 

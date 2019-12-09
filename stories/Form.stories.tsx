@@ -88,6 +88,7 @@ const Form: FunctionComponent = () => {
                 onChange={handleName}
                 onBlur={validateName}
                 errorMessage={nameError}
+                prefix="Mr"
             />
             <Input 
                 label="Age"
@@ -95,6 +96,7 @@ const Form: FunctionComponent = () => {
                 onChange={handleAge}
                 onBlur={validateAge}
                 errorMessage={ageError}
+                suffix="Years old"
             />
             </InputContainer>
             <Input
@@ -104,6 +106,7 @@ const Form: FunctionComponent = () => {
                 onBlur={validateEmail}
                 tooltip="We won't ever share your email with any third parties"
                 errorMessage={emailError}
+                suffix="@integrate.com"
             />
         </Container>
     )
